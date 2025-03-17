@@ -9,9 +9,11 @@ class BaseView():
         self.frame = tk.Frame(self.root)
 
     def show(self):
+        print('show frame')
         self.is_show=True
         self.frame.pack(fill="both", expand=True)
 
     def hide(self):
+        print('hide frame')
         self.is_show=False
         self.frame.pack_forget()

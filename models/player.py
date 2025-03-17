@@ -6,7 +6,7 @@ import numpy as np
 import logging
 # models/player.py
 class Player:
-    def __init__(self, event_manager:EventController,name:str='zhangsan',age = 16,exp = 0, cultivation_level=1, spiritual_stones=1000,):
+    def __init__(self, event_manager:EventController,name:str='zhangsan',age = 16,sex = 0,current_exp = 0):
         """
         """
         self.logger = logging.getLogger(self.__class__.__name__)
@@ -14,15 +14,15 @@ class Player:
         self.name = name
         self.age = age
         self.sex = 0
-        
+
         # 灵根
         self.spiritroot = SpiritRoot()
         self.cultivation_coefficient= self.spiritroot.getRate()     
         
         # 修为相关
         self.realm = Realm()
-        self.current_exp = exp
-        
+        self.current_exp = current_exp
+
         # 突破几率
         self.base_breakup_probability = 0.01
 

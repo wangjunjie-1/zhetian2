@@ -14,6 +14,7 @@ class MainView(BaseView):
          # 创建主界面
         self.create_main_menu()
         
+        
     def create_main_menu(self):
         """创建主菜单界面"""
         self.clear_window()
@@ -70,15 +71,14 @@ class MainView(BaseView):
         """创建系统 Frame"""
         tk.Label(system_frame, text="【系统】", font=("Arial", 14)).grid(row=0, column=0, padx=10, pady=10)
         tk.Button(system_frame, text="触发事件", width=15).grid(row=1, column=0, padx=10, pady=10)
-        tk.Button(system_frame, text="退出游戏", command=self.exit_game,width=15).grid(row=2, column=0, padx=10, pady=10)
+        tk.Button(system_frame, text="退出游戏", 
+                command=lambda: [
+                    self.eventcontroller.publish('exit'),  # 触发保存
+                ], width=15).grid(row=2, column=0, padx=10, pady=10)
         tk.Button(system_frame, text="手动刷新",command=lambda:self.eventcontroller.publish('show_main_view'), width=15).grid(row=4, column=0, padx=10, pady=10)
 
-    def exit_game(self):
-        self.logger.info("手动退出游戏")
-        exit()
-
     def update_player_info(self):
-        if self.is_show:
+        if hasattr(self,'is_show') and self.is_show is True:
             # 通过after方法调度到主线程
             self.frame.after(0, self._real_update_player_info)
 

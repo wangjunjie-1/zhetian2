@@ -10,3 +10,14 @@ class World:
         self.time_elapsed += delta_time
         self.logger.debug(f"时间流逝: {self.time_elapsed} 秒")
         self.eventcontroller.publish("time_pass")
+
+    def to_dict(self):
+        return {
+            'time_elapsed': self.time_elapsed
+        }
+    
+    @classmethod
+    def from_dict(cls, data, eventcontroller):
+        world = cls(eventcontroller)
+        world.time_elapsed = data['time_elapsed']
+        return world

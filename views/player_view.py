@@ -18,7 +18,6 @@ class PlayerInfoView(BaseView):
             # 通过after方法调度到主线程
             self.frame.after(0, self.create_gui)
 
-        
     def create_gui(self):
         # 创建一个框架来组织标签
         frame = self.frame

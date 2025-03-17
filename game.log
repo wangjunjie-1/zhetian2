@@ -9130,3 +9130,414 @@
 2025-03-16 22:15:41,523 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 26 秒
 2025-03-16 22:15:41,524 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 5.32 点修为，当前修为: 31.94
 2025-03-16 22:15:42,078 - MainThread - MainView - INFO - 手动退出游戏
+2025-03-17 12:57:12,771 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 12:57:12,771 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 12:57:12,771 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 12:57:12,771 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 12:57:12,773 - Thread-1 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 12:57:13,778 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 12:57:13,820 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 3.63
+2025-03-17 12:57:14,825 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 3 秒
+2025-03-17 12:57:15,027 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 7.26
+2025-03-17 12:57:16,033 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 4 秒
+2025-03-17 12:57:16,033 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 10.89
+2025-03-17 12:57:17,036 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 5 秒
+2025-03-17 12:57:17,037 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 14.52
+2025-03-17 12:57:18,042 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 6 秒
+2025-03-17 12:57:18,043 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 18.15
+2025-03-17 12:57:41,728 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 12:57:41,728 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 12:57:41,728 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 12:57:41,728 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 12:57:41,728 - Thread-1 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 12:57:42,733 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 12:57:42,734 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 2.42
+2025-03-17 12:57:43,528 - MainThread - MainView - INFO - 手动退出游戏
+2025-03-17 12:59:45,942 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 12:59:45,942 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 12:59:45,943 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 12:59:45,944 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 12:59:45,946 - Thread-1 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 12:59:46,947 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 12:59:46,982 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 1.50
+2025-03-17 13:03:45,193 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:03:45,193 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:03:45,194 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:03:45,197 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:03:45,197 - Thread-6 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:03:46,202 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:03:46,205 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 2.00 点修为，当前修为: 2.00
+2025-03-17 13:03:47,208 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 3 秒
+2025-03-17 13:03:47,208 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 2.00 点修为，当前修为: 4.00
+2025-03-17 13:03:48,213 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 4 秒
+2025-03-17 13:03:48,214 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 2.00 点修为，当前修为: 6.00
+2025-03-17 13:03:49,219 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 5 秒
+2025-03-17 13:03:49,220 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 2.00 点修为，当前修为: 8.00
+2025-03-17 13:06:46,928 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:06:46,928 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:06:46,928 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:06:46,935 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:06:46,937 - Thread-6 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:07:05,977 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:07:06,083 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 7.26 点修为，当前修为: 7.26
+2025-03-17 13:07:07,087 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 3 秒
+2025-03-17 13:07:07,088 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 7.26 点修为，当前修为: 14.52
+2025-03-17 13:07:11,849 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 4 秒
+2025-03-17 13:07:14,165 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 7.26 点修为，当前修为: 21.78
+2025-03-17 13:15:01,752 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:15:01,752 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:15:01,752 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:15:01,752 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:15:01,753 - Thread-1 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:15:02,755 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:15:02,756 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 2.00 点修为，当前修为: 2.00
+2025-03-17 13:17:30,422 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:17:30,422 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:17:30,422 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:17:30,422 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:17:30,423 - Thread-1 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:17:31,428 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:17:31,453 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 1.00
+2025-03-17 13:17:54,271 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:17:54,271 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:17:54,271 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:17:54,272 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:17:54,272 - Thread-1 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:17:55,275 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:17:55,275 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 1.50
+2025-03-17 13:26:07,348 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:26:07,348 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:26:07,348 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:26:07,349 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:26:07,353 - Thread-1 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:26:08,359 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:26:08,360 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 2.42
+2025-03-17 13:32:59,572 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:32:59,573 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:34:41,072 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:34:41,072 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:34:41,072 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:34:41,072 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 3 秒
+2025-03-17 13:41:29,060 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:41:29,061 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:41:29,061 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:41:40,585 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 3 秒
+2025-03-17 13:41:40,586 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 4.84
+2025-03-17 13:41:40,586 - Thread-7 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:41:41,588 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 4 秒
+2025-03-17 13:41:41,590 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 7.26
+2025-03-17 13:41:41,592 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 1.00
+2025-03-17 13:41:42,598 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 5 秒
+2025-03-17 13:41:42,599 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 9.68
+2025-03-17 13:41:42,613 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 2.00
+2025-03-17 13:41:43,618 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 6 秒
+2025-03-17 13:41:43,619 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 12.10
+2025-03-17 13:41:43,621 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 3.00
+2025-03-17 13:41:44,624 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 7 秒
+2025-03-17 13:41:44,625 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 14.52
+2025-03-17 13:41:44,628 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 4.00
+2025-03-17 13:41:45,631 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 8 秒
+2025-03-17 13:41:45,632 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 16.94
+2025-03-17 13:41:45,634 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 5.00
+2025-03-17 13:41:46,639 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 9 秒
+2025-03-17 13:41:46,640 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 19.36
+2025-03-17 13:41:46,641 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 6.00
+2025-03-17 13:41:47,647 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 10 秒
+2025-03-17 13:41:47,647 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 21.78
+2025-03-17 13:41:47,649 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 7.00
+2025-03-17 13:41:48,655 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 11 秒
+2025-03-17 13:41:48,656 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 24.20
+2025-03-17 13:41:48,661 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 8.00
+2025-03-17 13:41:49,664 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 12 秒
+2025-03-17 13:41:49,665 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 26.62
+2025-03-17 13:41:49,668 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 9.00
+2025-03-17 13:41:50,669 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 13 秒
+2025-03-17 13:41:50,670 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 29.04
+2025-03-17 13:41:50,671 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 10.00
+2025-03-17 13:41:51,674 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 14 秒
+2025-03-17 13:41:51,675 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 31.46
+2025-03-17 13:41:51,676 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 11.00
+2025-03-17 13:41:52,677 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 15 秒
+2025-03-17 13:41:52,681 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 33.88
+2025-03-17 13:41:52,684 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 12.00
+2025-03-17 13:41:53,688 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 16 秒
+2025-03-17 13:41:53,689 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 36.30
+2025-03-17 13:41:53,692 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 13.00
+2025-03-17 13:41:54,697 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 17 秒
+2025-03-17 13:41:54,699 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 38.72
+2025-03-17 13:41:54,710 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 14.00
+2025-03-17 13:41:55,719 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 18 秒
+2025-03-17 13:41:55,721 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 41.14
+2025-03-17 13:41:55,727 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 15.00
+2025-03-17 13:42:09,825 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:42:09,825 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:42:09,825 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:42:09,825 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 19 秒
+2025-03-17 13:42:21,980 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:42:21,981 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:42:21,981 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:42:21,989 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 19 秒
+2025-03-17 13:43:56,073 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:43:56,073 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:43:56,074 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:44:14,086 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 19 秒
+2025-03-17 13:44:14,086 - Thread-7 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 16.00
+2025-03-17 13:44:14,087 - Thread-7 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:44:25,061 - Thread-7 (main_loop) - World - DEBUG - 时间流逝: 20 秒
+2025-03-17 13:45:04,392 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:45:04,392 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:45:04,392 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:45:06,775 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:45:06,776 - Thread-6 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:45:11,014 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:45:11,015 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 2.42
+2025-03-17 13:45:30,336 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:45:30,336 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:45:30,337 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:45:32,514 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:45:32,514 - Thread-6 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:45:39,133 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:45:39,135 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.99 点修为，当前修为: 3.99
+2025-03-17 13:45:43,186 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 3 秒
+2025-03-17 13:45:43,186 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.99 点修为，当前修为: 7.99
+2025-03-17 13:45:47,347 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 4 秒
+2025-03-17 13:45:58,755 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:45:58,755 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:45:58,755 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:46:01,022 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:46:01,023 - Thread-6 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:46:02,394 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:46:02,395 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 1.00
+2025-03-17 13:46:05,210 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 3 秒
+2025-03-17 13:46:05,212 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 2.00
+2025-03-17 13:46:06,803 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 4 秒
+2025-03-17 13:46:34,753 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:46:34,754 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:46:34,754 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:46:36,950 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:46:36,951 - Thread-6 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:46:38,816 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:46:38,817 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 2.42
+2025-03-17 13:46:40,823 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 3 秒
+2025-03-17 13:46:40,825 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 4.84
+2025-03-17 13:46:42,186 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 4 秒
+2025-03-17 13:46:46,683 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 7.26
+2025-03-17 13:47:05,864 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 5 秒
+2025-03-17 13:47:18,322 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:47:18,322 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:47:18,323 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:47:20,026 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:47:20,027 - Thread-6 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:47:21,326 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:47:21,326 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 1.50
+2025-03-17 13:47:22,685 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 3 秒
+2025-03-17 13:47:22,686 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 3.00
+2025-03-17 13:47:24,532 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 4 秒
+2025-03-17 13:47:56,039 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:47:56,039 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:47:56,039 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:47:58,329 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:47:58,331 - Thread-6 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:48:02,774 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:48:02,774 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 2.42
+2025-03-17 13:48:15,864 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 3 秒
+2025-03-17 13:48:15,865 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 2.42 点修为，当前修为: 4.84
+2025-03-17 13:48:30,128 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:48:30,128 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:48:30,128 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:48:32,051 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:48:32,053 - Thread-6 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:48:33,059 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:48:33,059 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 5.32 点修为，当前修为: 5.32
+2025-03-17 13:48:34,064 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 3 秒
+2025-03-17 13:48:34,065 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 5.32 点修为，当前修为: 10.65
+2025-03-17 13:48:37,602 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 4 秒
+2025-03-17 13:48:56,364 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:48:56,364 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:48:56,364 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:48:56,364 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:48:56,365 - Thread-1 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:48:57,369 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:48:57,370 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 1.00
+2025-03-17 13:48:58,375 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 3 秒
+2025-03-17 13:48:58,376 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 2.00
+2025-03-17 13:48:59,376 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 4 秒
+2025-03-17 13:48:59,377 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 3.00
+2025-03-17 13:49:11,395 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:49:11,396 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:49:11,396 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:49:13,513 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:49:13,515 - Thread-6 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:49:14,654 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:49:14,654 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 3.63
+2025-03-17 13:49:15,814 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 3 秒
+2025-03-17 13:49:15,815 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 7.26
+2025-03-17 13:49:16,821 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 4 秒
+2025-03-17 13:49:37,297 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:49:37,297 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:49:37,297 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:49:40,856 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:49:40,858 - Thread-6 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:49:43,674 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:49:43,675 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 1.00
+2025-03-17 13:49:51,857 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 3 秒
+2025-03-17 13:49:51,858 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 1.00 点修为，当前修为: 2.00
+2025-03-17 13:49:53,357 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 4 秒
+2025-03-17 13:51:01,428 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:51:01,429 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:51:01,429 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:51:04,195 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:51:04,198 - Thread-6 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:52:02,030 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:53:27,444 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:53:27,444 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:53:27,444 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:53:30,006 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 1 秒
+2025-03-17 13:53:30,008 - Thread-6 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:53:31,168 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 2 秒
+2025-03-17 13:53:31,168 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 3.63
+2025-03-17 13:53:32,316 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 3 秒
+2025-03-17 13:53:32,317 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 7.26
+2025-03-17 13:53:33,320 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 4 秒
+2025-03-17 13:53:33,320 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 10.89
+2025-03-17 13:53:35,057 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 5 秒
+2025-03-17 13:53:35,057 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 14.52
+2025-03-17 13:53:36,121 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 6 秒
+2025-03-17 13:53:36,121 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 18.15
+2025-03-17 13:53:39,385 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 7 秒
+2025-03-17 13:53:39,386 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 21.78
+2025-03-17 13:53:40,391 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 8 秒
+2025-03-17 13:53:40,392 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 25.41
+2025-03-17 13:53:41,394 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 9 秒
+2025-03-17 13:53:41,395 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 29.04
+2025-03-17 13:53:42,400 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 10 秒
+2025-03-17 13:53:42,401 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 32.67
+2025-03-17 13:53:43,406 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 11 秒
+2025-03-17 13:53:43,407 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 36.30
+2025-03-17 13:53:44,411 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 12 秒
+2025-03-17 13:53:44,412 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 39.93
+2025-03-17 13:53:45,417 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 13 秒
+2025-03-17 13:53:45,418 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 43.56
+2025-03-17 13:53:46,420 - Thread-6 (main_loop) - World - DEBUG - 时间流逝: 14 秒
+2025-03-17 13:53:46,420 - Thread-6 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 47.19
+2025-03-17 13:53:57,387 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:53:57,387 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:53:57,387 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:53:57,387 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 15 秒
+2025-03-17 13:53:57,388 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 50.82
+2025-03-17 13:53:57,388 - Thread-1 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:53:58,393 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 16 秒
+2025-03-17 13:53:58,394 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 54.45
+2025-03-17 13:53:58,395 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 7.99 点修为，当前修为: 7.99
+2025-03-17 13:53:59,397 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 17 秒
+2025-03-17 13:53:59,398 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 58.08
+2025-03-17 13:53:59,398 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 7.99 点修为，当前修为: 15.97
+2025-03-17 13:54:00,404 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 18 秒
+2025-03-17 13:54:00,405 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 61.71
+2025-03-17 13:54:00,405 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 7.99 点修为，当前修为: 23.96
+2025-03-17 13:54:01,407 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 19 秒
+2025-03-17 13:54:01,409 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 65.34
+2025-03-17 13:54:01,409 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 7.99 点修为，当前修为: 31.94
+2025-03-17 13:54:02,411 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 20 秒
+2025-03-17 13:54:02,412 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 68.97
+2025-03-17 13:54:02,412 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 7.99 点修为，当前修为: 39.93
+2025-03-17 13:54:03,417 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 21 秒
+2025-03-17 13:54:03,418 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 72.60
+2025-03-17 13:54:03,418 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 7.99 点修为，当前修为: 47.92
+2025-03-17 13:54:04,423 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 22 秒
+2025-03-17 13:54:04,423 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 76.23
+2025-03-17 13:54:04,424 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 7.99 点修为，当前修为: 55.90
+2025-03-17 13:54:05,429 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 23 秒
+2025-03-17 13:54:05,430 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 79.86
+2025-03-17 13:54:05,430 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 7.99 点修为，当前修为: 63.89
+2025-03-17 13:54:06,432 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 24 秒
+2025-03-17 13:54:06,433 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 3.63 点修为，当前修为: 83.49
+2025-03-17 13:54:06,433 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 7.99 点修为，当前修为: 71.87
+2025-03-17 13:54:26,062 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:54:26,062 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:54:26,062 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:54:26,062 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 25 秒
+2025-03-17 13:54:26,064 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 7.99 点修为，当前修为: 79.86
+2025-03-17 13:54:26,064 - Thread-1 (main_loop) - Player - INFO - 突破 凡人境，进入 炼气境！
+2025-03-17 13:54:27,065 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 26 秒
+2025-03-17 13:54:27,066 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 7.99 点修为，当前修为: 87.85
+2025-03-17 13:54:27,066 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 1.50
+2025-03-17 13:54:28,071 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 27 秒
+2025-03-17 13:54:28,072 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 7.99 点修为，当前修为: 95.83
+2025-03-17 13:54:28,072 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 3.00
+2025-03-17 13:54:29,077 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 28 秒
+2025-03-17 13:54:29,078 - Thread-1 (main_loop) - Player - INFO - 突破 炼气境，进入 筑基境！
+2025-03-17 13:54:29,078 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 4.50
+2025-03-17 13:54:30,083 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 29 秒
+2025-03-17 13:54:30,084 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 7.99 点修为，当前修为: 7.99
+2025-03-17 13:54:30,084 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 6.00
+2025-03-17 13:54:42,078 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:54:42,078 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:54:42,078 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:54:42,078 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 30 秒
+2025-03-17 13:54:42,078 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 7.50
+2025-03-17 13:54:43,083 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 31 秒
+2025-03-17 13:54:43,084 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 9.00
+2025-03-17 13:54:44,089 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 32 秒
+2025-03-17 13:54:44,090 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 10.50
+2025-03-17 13:54:45,095 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 33 秒
+2025-03-17 13:54:45,096 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 12.00
+2025-03-17 13:54:46,102 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 34 秒
+2025-03-17 13:54:46,103 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 13.50
+2025-03-17 13:54:47,107 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 35 秒
+2025-03-17 13:54:47,109 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 15.00
+2025-03-17 13:54:48,112 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 36 秒
+2025-03-17 13:54:48,114 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 16.50
+2025-03-17 13:54:49,116 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 37 秒
+2025-03-17 13:54:49,116 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 18.00
+2025-03-17 13:54:50,118 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 38 秒
+2025-03-17 13:54:50,118 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 19.50
+2025-03-17 13:54:51,123 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 39 秒
+2025-03-17 13:54:51,123 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 21.00
+2025-03-17 13:54:52,129 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 40 秒
+2025-03-17 13:54:52,129 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 22.50
+2025-03-17 13:54:53,133 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 41 秒
+2025-03-17 13:54:53,133 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 24.00
+2025-03-17 13:54:54,138 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 42 秒
+2025-03-17 13:54:54,139 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 25.50
+2025-03-17 13:56:32,367 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:56:32,367 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:56:32,368 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:56:32,368 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 30 秒
+2025-03-17 13:57:07,435 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:57:07,435 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:57:07,435 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:57:07,435 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 31 秒
+2025-03-17 13:57:18,097 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:57:18,097 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:57:18,097 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:57:18,097 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 31 秒
+2025-03-17 13:57:18,098 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 9.00
+2025-03-17 13:57:19,101 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 32 秒
+2025-03-17 13:57:19,102 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 10.50
+2025-03-17 13:57:20,106 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 33 秒
+2025-03-17 13:57:20,107 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 12.00
+2025-03-17 13:57:21,112 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 34 秒
+2025-03-17 13:57:21,114 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 13.50
+2025-03-17 13:57:22,116 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 35 秒
+2025-03-17 13:57:22,117 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 15.00
+2025-03-17 13:57:23,122 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 36 秒
+2025-03-17 13:57:23,124 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 16.50
+2025-03-17 13:57:26,022 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:57:26,022 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:57:26,022 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:57:26,022 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 37 秒
+2025-03-17 13:57:26,022 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 18.00
+2025-03-17 13:57:27,027 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 38 秒
+2025-03-17 13:57:27,028 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 19.50
+2025-03-17 13:57:28,031 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 39 秒
+2025-03-17 13:57:28,032 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 21.00
+2025-03-17 13:57:31,915 - MainThread - GameEngine - INFO - 游戏启动！
+2025-03-17 13:57:31,915 - MainThread - GameEngine - DEBUG - 初始化人物信息
+2025-03-17 13:57:31,915 - MainThread - GameEngine - DEBUG - 启动主线程
+2025-03-17 13:57:31,915 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 40 秒
+2025-03-17 13:57:31,915 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 22.50
+2025-03-17 13:57:32,921 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 41 秒
+2025-03-17 13:57:32,922 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 24.00
+2025-03-17 13:57:33,928 - Thread-1 (main_loop) - World - DEBUG - 时间流逝: 42 秒
+2025-03-17 13:57:33,929 - Thread-1 (main_loop) - Player - INFO - 修炼成功，获得 1.50 点修为，当前修为: 25.50
