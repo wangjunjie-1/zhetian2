@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+*.log
 # 忽略虚拟环境
 venv/
 env/

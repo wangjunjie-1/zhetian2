@@ -17,11 +17,14 @@ class Player:
 
         # 灵根
         self.spiritroot = SpiritRoot()
-        self.cultivation_coefficient= self.spiritroot.getRate()     
+        self.base_cultivation_coefficient = self.spiritroot.getRate()     
         
         # 修为相关
         self.realm = Realm()
         self.current_exp = current_exp
+
+        # 武力
+        self.base_attack_up_limit = 10*self.realm.current_realm_index
 
         # 突破几率
         self.base_breakup_probability = 0.01
@@ -67,7 +70,7 @@ class Player:
     # 修炼相关函数
     def _cultivate_get_exp(self):
         # 灵根修炼系数
-        base_exp = self.cultivation_coefficient
+        base_exp = self.base_cultivation_coefficient
         #todo：
         #武器修炼系数
         weapon_exp = 0
