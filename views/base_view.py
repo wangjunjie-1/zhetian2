@@ -7,6 +7,7 @@ class BaseView():
         self.playercontroller = playercontroller
         self.root = root
         self.frame = tk.Frame(self.root)
+        self.is_show=False
 
     def show(self):
         print('show frame')

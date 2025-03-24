@@ -9,8 +9,8 @@ class MainView(BaseView):
         # self.frame.title("修仙门派游戏")
         # self.frame.geometry("1200x400")
 
-        self.eventcontroller.subscribe('cultivate',self.update_player_info)
-        self.eventcontroller.subscribe('breakup',self.update_player_info)
+        self.eventcontroller.subscribe('cultivate',lambda:self.update_player_info)
+        self.eventcontroller.subscribe('breakup',lambda:self.update_player_info)
          # 创建主界面
         self.create_main_menu()
         
@@ -57,7 +57,7 @@ class MainView(BaseView):
         tk.Button(personal_frame, text="修炼", width=15).grid(row=1, column=0, padx=10, pady=10)
         tk.Button(personal_frame, text="探索", width=15).grid(row=2, column=0, padx=10, pady=10)
         tk.Button(personal_frame, text="炼丹", width=15).grid(row=3, column=0, padx=10, pady=10)
-        tk.Button(personal_frame, text="炼器", width=15).grid(row=4, column=0, padx=10, pady=10)
+        tk.Button(personal_frame, text="打造武器",command=self.create_weapon_dialog,  width=15).grid(row=4, column=0, padx=10, pady=10)
 
     def create_faction_frame(self, faction_frame):
         """创建宗门 Frame"""
@@ -93,6 +93,46 @@ class MainView(BaseView):
         self.logger.info("手动刷新")
         self.create_main_menu()
    
+    def create_weapon_dialog(self):
+        """创建武器打造弹窗"""
+        dialog = tk.Toplevel(self.frame)
+        dialog.title("打造武器")
+        
+        # 武器信息展示
+        info_frame = tk.Frame(dialog)
+        info_frame.pack(padx=10, pady=10)
+        
+        # 分配下拉列表
+        assign_frame = tk.Frame(dialog)
+        assign_frame.pack(padx=10, pady=5)
+        
+        # 再创建武器之间应该还存在一个资源判定过程，预留这部分逻辑判断
+        if 1==1:
+            weapon = self.eventcontroller.publish('weapon_created')[0]
+            print(weapon)
+            # 显示武器信息
+            for widget in info_frame.winfo_children():
+                widget.destroy()
+            tk.Label(info_frame, text=f"成功打造：{weapon.name}").pack()
+            tk.Label(info_frame, text=f"品级：{weapon.level}").pack()
+            tk.Label(info_frame, text=f"类型：{weapon.part_type}").pack()
+            tk.Label(assign_frame, text="分配给：").pack(side="left")
+
+            disciples = ['宗门'] + list(self.playercontroller.playerList.keys()) # 需要实现getDisciples方法
+            self.assign_var = tk.StringVar(value='宗门')
+            tk.OptionMenu(assign_frame, self.assign_var, *disciples).pack(side="left")
+            # 确认按钮
+            tk.Button(dialog, text="确认", command=lambda: [
+                self.eventcontroller.publish('weapon_assigned', (self.assign_var.get(),weapon)),  # 触发保存
+                dialog.destroy()
+            ]).pack(pady=10)
+        else:
+            pass
+    
+    def update(self):
+        self.logger.info("手动刷新")
+        self.create_main_menu()
+   
     def create_faction_info_frame(self, faction_info_frame):
         """创建宗门信息 Frame"""
         # 标题
@@ -119,7 +159,7 @@ class MainView(BaseView):
     def create_personal_info_frame(self, personal_info_frame):
         """创建个人信息 Frame"""
 
-        k,player = self.playercontroller.getMaster()
+        k,player = self.playercontroller.get_master()
         # 创建并放置标签和文本框
         tk.Label(personal_info_frame, text="掌门").grid(row=0, column=0, padx=10, pady=10)
         # tk.Button(personal_info_frame, text="查看",command=lambda:self.eventcontroller.publish('show_player_view',player)).grid(row=0, column=2, padx=10, pady=10)

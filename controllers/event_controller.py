@@ -16,5 +16,7 @@ class EventController:
         with self._lock:  # 加锁保护
             listeners = self._listeners.get(event_type, [])[:]
             
+        ans = []
         for listener in listeners:  # 在锁外执行回调
-            listener(*args, **kwargs)
+            ans.append(listener(*args, **kwargs))
+        return ans

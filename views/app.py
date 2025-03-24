@@ -32,8 +32,6 @@ class App:
 
         # 显示主界面
         self.current_view = MainView(self.root,self.eventcontroller,self.playercontroller)
-        
-        # self.show_master_view()
         self.current_view.show()
 
     def show_player_view(self,player:Player=None):
