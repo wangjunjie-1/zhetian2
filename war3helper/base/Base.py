@@ -22,5 +22,5 @@ class Base:
         if self.form_list[index] is not False:
             logger.warning(f'index {index} already form')
         # 快速编队
-        pyautogui.hotkey('ctrl', index)
+        pyautogui.hotkey('ctrl', str(index))
         self.form_list[index] = True

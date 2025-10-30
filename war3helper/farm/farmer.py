@@ -9,7 +9,7 @@ class Farmer(Army):
         # 选择建筑
         pyautogui.press(construct_idx)
         if Real_pox is not None:
-            self.move_rel(*Real_pox)
+            self.move_abl(*Real_pox)
         # 确认建筑
         pyautogui.click(duration=0.5)
 
