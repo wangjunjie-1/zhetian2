@@ -49,8 +49,17 @@ class MouseController:
         self.move_delay_range = (0.02, 0.08)
         self.drag_delay_range = (0.1, 0.3)
 
+    def _cal_duration(self, x:int,y:int) -> float:
+        cur_x, cur_y = pyautogui.position()
+        distance = ((x - cur_x) ** 2 + (y - cur_y) ** 2) ** 0.5
+        distance_factor = 0.002  # 每个像素的时间因子，可调节
+        base_duration = distance * distance_factor
+        # 添加随机波动
+        random_variation = random.uniform(-0.05, 0.05)
+        duration = max(0.1, base_duration + random_variation)
+        return duration
     
-    def move_mouse(self, x: int, y: int, duration: Optional[float] = None) -> None:
+    def move_mouse(self, x: int, y: int) -> None:
         """
         移动鼠标到指定坐标
         
@@ -58,15 +67,12 @@ class MouseController:
             x: 目标X坐标
             y: 目标Y坐标
             duration: 移动持续时间，如果为None则使用随机延迟
-        """
-        if duration is None:
-            duration = random.uniform(*self.move_delay_range)
-        
-        pyautogui.moveTo(x, y, duration=duration)
+        """        
+        pyautogui.moveTo(x, y, duration=self._cal_duration(x,y))
         time.sleep(random.uniform(*self.click_delay_range) / 2)
     
     def left_click(self, x: Optional[int] = None, y: Optional[int] = None, 
-                  clicks: int = 1, duration: Optional[float] = None) -> None:
+                  clicks: int = 1) -> None:
         """
         左键点击
         
@@ -79,11 +85,10 @@ class MouseController:
         if x is not None and y is not None:
             self.move_mouse(x, y)   
         
-        pyautogui.click(button='left', clicks=clicks, duration=duration)
+        pyautogui.click(button='left', clicks=clicks)
         time.sleep(random.uniform(*self.click_delay_range))
     
-    def right_click(self, x: Optional[int] = None, y: Optional[int] = None, 
-                   duration: Optional[float] = None) -> None:
+    def right_click(self, x: Optional[int] = None, y: Optional[int] = None) -> None:
         """
         右键点击
         
@@ -95,39 +100,10 @@ class MouseController:
         if x is not None and y is not None:
             self.move_mouse(x, y)
         
-        pyautogui.click(button='right', duration=duration)
+        pyautogui.click(button='right')
         time.sleep(random.uniform(*self.click_delay_range))
-    
-    def select_unit(self, x: int, y: int) -> None:
-        """
-        左键选择单位
-        
-        Args:
-            x: 单位X坐标
-            y: 单位Y坐标
-        """
-        # 添加一些随机性，让选择看起来更自然
-        x += random.randint(-5, 5)
-        y += random.randint(-5, 5)
-        
-        self.left_click(x, y)
-    
-    def move_to_position(self, x: int, y: int) -> None:
-        """
-        右键移动到指定位置
-        
-        Args:
-            x: 目标X坐标
-            y: 目标Y坐标
-        """
-        # 添加一些随机性，让移动指令看起来更自然
-        x += random.randint(-10, 10)
-        y += random.randint(-10, 10)
-        
-        self.right_click(x, y,duration=0.5)
-    
-    def drag_mouse(self, start_x: int, start_y: int, end_x: int, end_y: int, 
-                  duration: Optional[float] = None) -> None:
+            
+    def drag_mouse(self, start_x: int, start_y: int, end_x: int, end_y: int) -> None:
         """
         拖拽鼠标
         
@@ -145,7 +121,7 @@ class MouseController:
         self.move_mouse(start_x, start_y)
         
         # 执行拖拽
-        pyautogui.dragTo(end_x, end_y, duration=duration, button='left')
+        pyautogui.dragTo(end_x, end_y, duration=self._cal_duration(end_x,end_y), button='left')
         time.sleep(random.uniform(*self.click_delay_range))
     
     def scroll_screen_edge(self, direction: str, duration: float = 0.5) -> None:
@@ -182,27 +158,6 @@ class MouseController:
             # 回到屏幕中央附近
             self.move_mouse(self.screen_width // 2, self.screen_height // 2)
     
-    def box_select(self, start_x: int, start_y: int, end_x: int, end_y: int) -> None:
-        """
-        框选多个单位
-        
-        Args:
-            start_x: 框选起始X坐标
-            start_y: 框选起始Y坐标
-            end_x: 框选结束X坐标
-            end_y: 框选结束Y坐标
-        """
-        self.drag_mouse(start_x, start_y, end_x, end_y)
-    
-    def get_current_position(self) -> Tuple[int, int]:
-        """
-        获取鼠标当前位置
-        
-        Returns:
-            当前鼠标坐标 (x, y)
-        """
-        return pyautogui.position()
-    
     def is_mouse_at_edge(self) -> Tuple[bool, Optional[str]]:
         """
         检查鼠标是否在屏幕边缘
@@ -210,7 +165,7 @@ class MouseController:
         Returns:
             (是否在边缘, 边缘方向或None)
         """
-        x, y = self.get_current_position()
+        x, y = pyautogui.position()
         
         if x <= self.edge_margin:
             return True, 'left'
@@ -223,37 +178,11 @@ class MouseController:
         
         return False, None
     
-    def simulate_random_movement(self, count: int = 5, area: Optional[Tuple[int, int, int, int]] = None) -> None:
-        """
-        模拟随机鼠标移动，增加操作的自然性
-        
-        Args:
-            count: 随机移动次数
-            area: 移动区域 (x, y, width, height)，None表示整个屏幕
-        """
-        if area is None:
-            area = (self.edge_margin, self.edge_margin, 
-                   self.screen_width - 2 * self.edge_margin, 
-                   self.screen_height - 2 * self.edge_margin)
-        
-        for _ in range(count):
-            x = random.randint(area[0], area[0] + area[2])
-            y = random.randint(area[1], area[1] + area[3])
-            self.move_mouse(x, y)
-    
-    def click_at_random_point_in_area(self, x: int, y: int, width: int, height: int) -> None:
-        """
-        在指定区域内随机点击
-        
-        Args:
-            x: 区域起始X坐标
-            y: 区域起始Y坐标
-            width: 区域宽度
-            height: 区域高度
-        """
-        target_x = x + random.randint(0, width)
-        target_y = y + random.randint(0, height)
-        self.left_click(target_x, target_y)
+    def map_coordinate_move(self,x1,y1,x2,y2):
+        """小地图坐标移动"""
+        self.left_click(x1,y1)
+        self.move_mouse(x2,y2)
+
 
 
 # 测试函数

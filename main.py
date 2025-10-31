@@ -1,11 +1,8 @@
 import logging
-from war3helper.base.Base import Base 
-from war3helper.base.TinyMapBox import TinyMapBox
 import time
 from mouse import   MouseController
 import os,sys
 
-from war3helper.farm.farmer import Farmer01
 logging.basicConfig(level=logging.DEBUG)
 import pyautogui
 from pynput import mouse
@@ -13,16 +10,13 @@ from pynput import keyboard
 DEBUG_MODE = True
 running = True
 
-base = Base()
-tiny_map_box = TinyMapBox()
-farmer01 = Farmer01()
-mouse_controller = MouseController() 
-
-
+# 防御塔坐标应该是一个列表，避免编队
+tower_coord_list=[]
 
 def on_click(x, y, button, pressed):
     if button == mouse.Button.left and pressed:
         print(f"鼠标左键被按下，当前位置: {pyautogui.position()}")
+        
 def on_press(key):
     global running
     try:

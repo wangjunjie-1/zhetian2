@@ -1,5 +1,5 @@
 import pyautogui
-from war3helper.base.Army import Army
+
 class Farmer(Army):
     def __init__(self,name='farmer'):
         super().__init__(name)  
@@ -12,6 +12,7 @@ class Farmer(Army):
             self.move_abl(*Real_pox)
         # 确认建筑
         pyautogui.click(duration=0.5)
+        pyautogui.press('enter',)
 
 class Farmer01(Farmer):
     def __init__(self,name='farmer01'):
