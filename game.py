@@ -6,8 +6,9 @@ import logging
 import sys
 from pynput import mouse, keyboard
 from typing import List
-from run_vision import OCR
+from ocr import OCR
 from utils import enter_info, form_item
+from tech import Technology
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     level=logging.DEBUG,
@@ -17,7 +18,9 @@ game_01_flag = False
 game_02_flag = False
 
 mouse_controller = MouseController()
-OCR = OCR(model_name=r"PP-OCRv5_server_rec",model_dir=r"./ocr_model/PP-OCRv4_server_rec_doc_infer")
+ocr = OCR(model_name=r"PP-OCRv5_server_rec",model_dir=r"./ocr_model/PP-OCRv4_server_rec_doc_infer")
+# 初始化科技管理类
+tech_manager = Technology(ocr)
 
 N_pos_list = [(990, 591)]  # 难度选择位置 休闲
 # N_pos = [(973,310),(976,157)] # 难度选择位置 常规 N1
@@ -44,29 +47,18 @@ def on_click(x, y, button, pressed):
 
 def on_press(key):
     global running
-    try:
-        # 普通字符键（如 'a', '1', 'Q'）
-        if hasattr(key, "char"):
-            char = key.char.lower()
-            if char == "g":
-                game_step01()
-            if char == "h":
-                game_step02()
-            if char == "j":
-                hero_start()
-            if char == "t":
-                logging.error(f"{time.time()}")
-            elif char == "x":
-                print("收到 'x'，准备退出...")
-                running = False
-                return False  # 停止键盘监听
-    except AttributeError:
-        pass
-    # 特殊键（如 Esc）——必须放在 try/except 外或单独判断
-    if key == keyboard.Key.esc:
-        print("收到 ESC，退出程序...")
-        running = False
-        return False  # 停止当前监听器
+    # 普通字符键（如 'a', '1', 'Q'）
+    if hasattr(key, "char"):
+        char = key.char.lower()
+        if char == "g":
+            game_step01()
+        if char == "h":
+            game_step02()
+        if char == "j":
+            hero_start()
+        if char == "t":
+            logging.error(f"{time.time()}")
+
 
 def killer(key):
     try:
@@ -147,6 +139,9 @@ def game_step01():
     # 选天赋，开自动维修
     screen_move2self(farmer01_idx)
     mouse_controller.right_click(1638, 941)
+    
+    ## todo使用OCR选天赋 
+    ocr.select_talent()
     pyautogui.press("D")
     mouse_controller.left_click(1920 // 2, 1080 // 3)
      
@@ -219,8 +214,15 @@ def game_step01():
 
     # 研究科技
     for i in range(11):
+        # 获取下一级科技所需资源
+        next_requirements = tech_manager.get_next_level_requirements()
+        if next_requirements:
+            enter_info(f"升级科技到第{tech_manager.get_current_level() + 1}级，需要资源: {next_requirements}")
         time.sleep(3)
         pyautogui.press("Q")
+        # 更新科技级别
+        tech_manager.upgrade()
+        enter_info(f"当前科技级别: {tech_manager.get_current_level()}")
     # 成长塔
     time.sleep(30)
     build_construct(builder_idx=farmer01_idx, construct_idx="D", box_list=hero_tower_pos)
@@ -228,9 +230,38 @@ def game_step01():
     mouse_controller.left_click(hero_tower_pos[2]-15, hero_tower_pos[3]-15)
     # 研究科技
     for i in range(11):
+        # 获取下一级科技所需资源
+        next_requirements = tech_manager.get_next_level_requirements()
+        if next_requirements:
+            enter_info(f"升级科技到第{tech_manager.get_current_level() + 1}级，需要资源: {next_requirements}")
         time.sleep(10)
         pyautogui.press("Q")
-        
+        # 更新科技级别
+        tech_manager.upgrade()
+        enter_info(f"当前科技级别: {tech_manager.get_current_level()}")
+
+def game_step02():
+    enter_info("game02 start...")
+    
+    tech_manager.upgrade(camp_idx,"Q",10)
+
+    build_construct(builder_idx=farmer01_idx, construct_idx="D", box_list=hero_tower_pos)
+    mouse_controller.left_click(hero_tower_pos[2], hero_tower_pos[3])
+    time.sleep(10)
+
+    tech_manager.upgrade(camp_idx,"Q",15)
+    # base upgrade  level 3
+    tech_manager.upgrade(base_idx,"A",2)
+    # build hero
+    build_construct(farmer01_idx, "A", hero_pos)
+    time.sleep(30)
+    mouse_controller.left_click(hero_pos[2]-15, hero_pos[3]-15)
+    pyautogui.press("Q")
+    ocr.select_hero()
+    mouse_controller.left_click(1920 // 2, 1080 // 3)
+    tech_manager.upgrade(camp_idx,"Q",15)
+
+
 def hero_box_train(box_info):
     build_idx = box_info['build_idx']
     box_idx = box_info['box_idx']
@@ -243,14 +274,6 @@ def hero_box_train(box_info):
     mouse_controller.right_click(boss_pos[2], boss_pos[3])
     pyautogui.press(["D","A"],interval=0.1)
 
-def hero_start():
-    enter_info("hero process...")
-    build_construct(farmer01_idx, "A", hero_pos)
-    time.sleep(2)
-    mouse_controller.left_click(hero_pos[2], hero_pos[3])
-    pyautogui.press("Q")
-    # 这里应该使用视觉方案，但是暂时也先试用随机吧。
-    mouse_controller.left_click(1920 // 2, 1080 // 3)
 
 def tower_update():
     enter_info("tower update...")

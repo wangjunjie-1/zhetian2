@@ -11,6 +11,7 @@ tree_idx = 8
 cailiao_idx = 7
 zhuanshen_idx = 9
 # jiezhi_idx = 0
+advanced_camp_idx = 10
 
 _cailiao_box = {
     '1_pass':{
