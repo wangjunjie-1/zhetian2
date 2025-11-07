@@ -6,7 +6,7 @@ import logging
 import sys
 from pynput import mouse, keyboard
 from typing import List
-from utils import enter_info
+from utils import enter_info, form_item
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     level=logging.DEBUG,
@@ -24,17 +24,16 @@ tree_aim_list = [(178, 987, 738, 356)]
 
 hero_tower_pos =(174, 990,1068,528)
 
-wall_pos =       (174, 990, 1156, 467)  # 前两个应该是小地图坐标，后两个基于center的rel坐标
-base_pos =       (174, 990, 1120, 307)  # 后两个基于screen的rel坐标,首先应该确定墙的位置
-first_camp_pos = (174, 990, 1451, 713)  # 前两个应该是小地图坐标，后两个基于center的rel坐标
+wall_pos =       (174, 990, 1156, 467)  
+base_pos =       (174, 990, 1120, 307)  
+first_camp_pos = (174, 990, 1451, 713)  
 
-farm_pos =     (175,958, 500, 562)  # 前两个应该是小地图坐标，后两个基于center的rel坐标
-research_pos = (175,958, 563, 562)  # 前两个应该是小地图坐标，后两个基于center的rel坐标
-hero_pos = (400, 500, 300, 400)  # 前两个应该是小地图坐标，后两个基于center的rel坐标R
+farm_pos =     (175,958, 500, 562)  
+research_pos = (175,958, 563, 562) 
+hero_pos = (400, 500, 300, 400)  
 running = True
-# 防御塔坐标应该是一个列表，避免编队
-tower_coord_list = []
 
+tower_coord_list = []
 
 def on_click(x, y, button, pressed):
     if button == mouse.Button.left and pressed:
@@ -65,6 +64,17 @@ def on_press(key):
         print("收到 ESC，退出程序...")
         running = False
         return False  # 停止当前监听器
+
+def killer(key):
+    try:
+        # 检查是否按下了字母 'k'（区分大小写，但 char 会反映实际按键）
+        if hasattr(key, 'char') and key.char in ('k', 'K'):
+            print("K pressed! Killing main process...")
+            # 强制终止当前进程
+            os.kill(os.getpid(), signal.SIGTERM)
+            # 或者在 Windows 上也可以用 os._exit(1) 立即退出（不推荐用于生产）
+    except Exception as e:
+        pass  # 忽略异常（如特殊键）
 
 def build_construct(builder_idx, construct_idx, box_list: List):
     """通用建筑函数
@@ -116,7 +126,7 @@ def game_step01():
     time.sleep(1)
     mouse_controller.left_click(63, 730)
     time.sleep(0.5)
-    famer01 = Item("famer01", farmer01_idx)
+    form_item(farmer01_idx,"famer01")
     time.sleep(1)
 
     # 购买鱼竿
@@ -132,7 +142,7 @@ def game_step01():
     time.sleep(1)
 
     # 选天赋，开自动维修
-    famer01._seclect_2_center()
+    screen_move2self(farmer01_idx)
     mouse_controller.right_click(1638, 941)
     pyautogui.press("D")
     mouse_controller.left_click(1920 // 2, 1080 // 3)
@@ -147,7 +157,7 @@ def game_step01():
     mouse_controller.left_click(wall_pos[2], wall_pos[3])
     time.sleep(30)
     mouse_controller.left_click(wall_pos[2]-15, wall_pos[3]-15)
-    wall = Item("wall", wall_idx)
+    form_item(wall_idx,"wall")
 
    
 
@@ -155,7 +165,7 @@ def game_step01():
     mouse_controller.left_click(base_pos[2], base_pos[3])
     time.sleep(10)
     mouse_controller.left_click(base_pos[2]-15, base_pos[3]-15)
-    base = Item("base", base_idx)
+    form_item(base_idx,"base")
      
 
     camp_pos = first_camp_pos
@@ -163,20 +173,20 @@ def game_step01():
     mouse_controller.left_click(camp_pos[2], camp_pos[3])
     time.sleep(10)
     mouse_controller.left_click(camp_pos[2]-15, camp_pos[3]-15)
-    camp = Item("camp", camp_idx)
+    form_item(camp_idx,"camp")
     
 
     build_construct(builder_idx=farmer01_idx, construct_idx="v", box_list=research_pos)
     mouse_controller.left_click(research_pos[2], research_pos[3])
     time.sleep(10)
     mouse_controller.left_click(research_pos[2]-15, research_pos[3]-15)
-    research = Item("research", research_idx)
+    form_item(research_idx,"research")
    
     build_construct(builder_idx=farmer01_idx, construct_idx="f", box_list=farm_pos)
     mouse_controller.left_click(farm_pos[2], farm_pos[3])
     time.sleep(10)
     mouse_controller.left_click(farm_pos[2]-15, farm_pos[3]-15)
-    farm = Item("farm", farm_idx)
+    form_item(farm_idx,"farm")
 
     # base 创建农民
 
@@ -217,7 +227,6 @@ def game_step01():
     for i in range(11):
         time.sleep(10)
         pyautogui.press("Q")
-
         
 def hero_box_train(box_info):
     build_idx = box_info['build_idx']
@@ -257,7 +266,8 @@ if __name__ == "__main__":
     # 启动监听器
     mouse_listener = mouse.Listener(on_click=on_click)
     kb_listener = keyboard.Listener(on_press=on_press)
-
+    killer_listener = keyboard.Listener(on_press=killer)
+    killer_listener.start()
     mouse_listener.start()
     kb_listener.start()
 
