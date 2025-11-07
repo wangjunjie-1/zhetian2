@@ -113,10 +113,7 @@ class MouseController:
             end_x: 结束X坐标
             end_y: 结束Y坐标
             duration: 拖拽持续时间
-        """
-        if duration is None:
-            duration = random.uniform(*self.drag_delay_range)
-        
+        """        
         # 先移动到起始位置
         self.move_mouse(start_x, start_y)
         

@@ -12,23 +12,25 @@ logging.basicConfig(
     level=logging.DEBUG,
     )
 from coordinate import *
+game_01_flag = False
+game_02_flag = False
 
 mouse_controller = MouseController()
-N_pos_list = [(1141, 599)]  # 难度选择位置 休闲
+N_pos_list = [(990, 591)]  # 难度选择位置 休闲
 # N_pos = [(973,310),(976,157)] # 难度选择位置 常规 N1
 camp_pos_list = [(171, 982, 1246, 458)]
-tree_aim_list = [(500, 600, 200, 300)]
+tree_aim_list = [(178, 987, 738, 356)]
 
 
+hero_tower_pos =(174, 990,1068,528)
 
-tower_list = []
+wall_pos =       (174, 990, 1156, 467)  # 前两个应该是小地图坐标，后两个基于center的rel坐标
+base_pos =       (174, 990, 1120, 307)  # 后两个基于screen的rel坐标,首先应该确定墙的位置
+first_camp_pos = (174, 990, 1451, 713)  # 前两个应该是小地图坐标，后两个基于center的rel坐标
 
-wall_pos = (175, 976, 726, 379)  # 前两个应该是小地图坐标，后两个基于center的rel坐标
-camp_pos = (171, 982, 1246, 458)  # 前两个应该是小地图坐标，后两个基于center的rel坐标
-base_pos = (1205, 635)  # 后两个基于screen的rel坐标,首先应该确定墙的位置
-farm_pos = (300, 400, 100, 200)  # 前两个应该是小地图坐标，后两个基于center的rel坐标
-research_pos = (500, 600, 200, 300)  # 前两个应该是小地图坐标，后两个基于center的rel坐标
-hero_pos = (400, 500, 300, 400)  # 前两个应该是小地图坐标，后两个基于center的rel坐标
+farm_pos =     (175,958, 500, 562)  # 前两个应该是小地图坐标，后两个基于center的rel坐标
+research_pos = (175,958, 563, 562)  # 前两个应该是小地图坐标，后两个基于center的rel坐标
+hero_pos = (400, 500, 300, 400)  # 前两个应该是小地图坐标，后两个基于center的rel坐标R
 running = True
 # 防御塔坐标应该是一个列表，避免编队
 tower_coord_list = []
@@ -78,10 +80,12 @@ def build_construct(builder_idx, construct_idx, box_list: List):
     mouse_controller.map_coordinate_move(
         box_list[0], box_list[1], box_list[2], box_list[3]
     )
-    pyautogui.press([str(builder_idx), "B", str(construct_idx)], interval=0.25)
+    pyautogui.press(str(builder_idx))
+    pyautogui.press("B")
+    pyautogui.press(str(construct_idx))
     mouse_controller.left_click(box_list[2], box_list[3])
 
-def build_army(builder_idx, army_idx, box_list: List):
+def build_army(builder_idx, army_idx, box_list: List,time:int=1):
     if len(box_list) != 4:
         raise ValueError(
             "box_list must contain exactly 4 elements: [map_x, map_y, real_x, real_y]"
@@ -89,29 +93,20 @@ def build_army(builder_idx, army_idx, box_list: List):
     mouse_controller.map_coordinate_move(
         box_list[0], box_list[1], box_list[2], box_list[3]
     )
-    pyautogui.press([str(builder_idx), str(army_idx)], interval=0.25)
+    pyautogui.press(str(builder_idx))
+    for i in range(time):
+        pyautogui.press(str(army_idx))
     mouse_controller.right_click(box_list[2], box_list[3])
 
 def game_step01():
-    enter_info("game start...")
+    global game_01_flag
+    if game_01_flag:
+        enter_info("game01 pass")
+        return
+    game_01_flag = True
+    # enter_info("game start...")
 
-    buyer_pos = (954 - 100, 394 - 100, 954 + 100, 394 + 100)  # 鱼竿商人位置
-
-    wall_pos = (175, 976, 726, 379)  # 前两个应该是小地图坐标，后两个基于center的rel坐标
-    camp_pos = (
-        171,
-        982,
-        1246,
-        458,
-    )  # 前两个应该是小地图坐标，后两个基于center的rel坐标
-    base_pos = (1205, 635)  # 后两个基于screen的rel坐标,首先应该确定墙的位置
-    farm_pos = (300, 400, 100, 200)  # 前两个应该是小地图坐标，后两个基于center的rel坐标
-    research_pos = (
-        500,
-        600,
-        200,
-        300,
-    )  # 前两个应该是小地图坐标，后两个基于center的rel坐标
+    buyer_pos = (897,337,1029,483)  # 鱼竿商人位置
 
     # 选择游戏难度
     for N in N_pos_list:
@@ -119,7 +114,7 @@ def game_step01():
 
     # 编队
     time.sleep(1)
-    mouse_controller.left_click(54, 735)
+    mouse_controller.left_click(63, 730)
     time.sleep(0.5)
     famer01 = Item("famer01", farmer01_idx)
     time.sleep(1)
@@ -128,7 +123,7 @@ def game_step01():
     """
     查找鱼竿商人位置,应该是一个固定位置，跳过视觉检测方案。
     """
-    time.sleep(5)
+    time.sleep(1)
     mouse_controller.drag_mouse(*buyer_pos)
     time.sleep(1)
     pyautogui.press("tab")
@@ -138,9 +133,11 @@ def game_step01():
 
     # 选天赋，开自动维修
     famer01._seclect_2_center()
-    mouse_controller.right_click(1631, 951)
+    mouse_controller.right_click(1638, 941)
     pyautogui.press("D")
     mouse_controller.left_click(1920 // 2, 1080 // 3)
+     
+
 
     # 造墙，造基地，造伐木场
     """
@@ -148,49 +145,79 @@ def game_step01():
     """
     build_construct(builder_idx=farmer01_idx, construct_idx="Q", box_list=wall_pos)
     mouse_controller.left_click(wall_pos[2], wall_pos[3])
+    time.sleep(30)
+    mouse_controller.left_click(wall_pos[2]-15, wall_pos[3]-15)
     wall = Item("wall", wall_idx)
+
+   
 
     build_construct(builder_idx=farmer01_idx, construct_idx="A", box_list=base_pos)
     mouse_controller.left_click(base_pos[2], base_pos[3])
+    time.sleep(10)
+    mouse_controller.left_click(base_pos[2]-15, base_pos[3]-15)
     base = Item("base", base_idx)
+     
 
-    camp_pos = camp_pos_list[0]
+    camp_pos = first_camp_pos
     build_construct(builder_idx=farmer01_idx, construct_idx="S", box_list=camp_pos)
     mouse_controller.left_click(camp_pos[2], camp_pos[3])
+    time.sleep(10)
+    mouse_controller.left_click(camp_pos[2]-15, camp_pos[3]-15)
     camp = Item("camp", camp_idx)
+    
 
     build_construct(builder_idx=farmer01_idx, construct_idx="v", box_list=research_pos)
     mouse_controller.left_click(research_pos[2], research_pos[3])
+    time.sleep(10)
+    mouse_controller.left_click(research_pos[2]-15, research_pos[3]-15)
     research = Item("research", research_idx)
-
+   
     build_construct(builder_idx=farmer01_idx, construct_idx="f", box_list=farm_pos)
     mouse_controller.left_click(farm_pos[2], farm_pos[3])
+    time.sleep(10)
+    mouse_controller.left_click(farm_pos[2]-15, farm_pos[3]-15)
     farm = Item("farm", farm_idx)
 
     # base 创建农民
-    for i in range(5):
-        time.sleep(1)
-        build_army(builder_idx=base_idx, army_idx="Q", box_list=tree_aim_list[0])
-    for i in range(3):
-        time.sleep(1)
-        build_army(builder_idx=base_idx, army_idx="Q", box_list=tree_aim_list[0])
-    for i in range(3):
-        time.sleep(1)
-        build_army(builder_idx=base_idx, army_idx="Q", box_list=tree_aim_list[0])
 
-def game_step02():
-    enter_info("game step02...")
-    # 造防御塔
-    for tower_coord in tower_coord_list:
-        build_construct(
-            builder_idx=farmer01_idx, construct_idx="Q", box_list=tower_coord
-        )
-        mouse_controller.left_click(tower_coord[2], tower_coord[3])
-        time.sleep(10)
+    build_army(builder_idx=base_idx, army_idx="Q", box_list=tree_aim_list[0],time=6)
+    time.sleep(5)
+    build_army(builder_idx=base_idx, army_idx="Q", box_list=tree_aim_list[0],time=3)
+    time.sleep(5)
+    build_army(builder_idx=base_idx, army_idx="Q", box_list=tree_aim_list[0],time=3)
+    enter_info("game01 end")
+     
+
+    global game_02_flag
+    if game_02_flag:
+        enter_info("step02 pass")
+        return
+    game_02_flag = True
+    enter_info("step02...")
+
+    
+    pyautogui.press(str(camp_idx))
     # 研究科技
-    for i in range(200):
+    for i in range(4):
         time.sleep(1)
         pyautogui.press("R")
+
+        pyautogui.press(str(camp_idx))
+
+    # 研究科技
+    for i in range(11):
+        time.sleep(3)
+        pyautogui.press("Q")
+    # 成长塔
+    time.sleep(30)
+    build_construct(builder_idx=farmer01_idx, construct_idx="D", box_list=hero_tower_pos)
+    time.sleep(30)
+    mouse_controller.left_click(hero_tower_pos[2]-15, hero_tower_pos[3]-15)
+    # 研究科技
+    for i in range(11):
+        time.sleep(10)
+        pyautogui.press("Q")
+
         
 def hero_box_train(box_info):
     build_idx = box_info['build_idx']

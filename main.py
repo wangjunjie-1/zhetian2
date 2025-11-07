@@ -49,7 +49,7 @@ def screen_to_form_idx(form_idx):
 def game_step01():
     print("开始游戏...")
     # N_pos = [(973,310),(976,157)] # 难度选择位置 常规 N1
-    N_pos = [(1141,599)] # 难度选择位置 休闲
+    N_pos = [(990,591)] # 难度选择位置 休闲
     buyer_pos = (954-100,394-100,954+100,394+100) # 鱼竿商人位置
     wall_pos = (175,976,726,379) # 前两个应该是小地图坐标，后两个基于center的rel坐标
     base_pos = (1205,635) # 后两个基于screen的rel坐标,首先应该确定墙的位置
@@ -63,7 +63,7 @@ def game_step01():
 
     # 编队
     time.sleep(1)
-    pyautogui.click(54,735,duration=0.5)
+    pyautogui.click(63,730,duration=0.5)
     time.sleep(0.5)
     base.fast_form_up(3)
     time.sleep(1)
