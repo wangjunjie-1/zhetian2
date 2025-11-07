@@ -6,6 +6,7 @@ import logging
 import sys
 from pynput import mouse, keyboard
 from typing import List
+from run_vision import OCR
 from utils import enter_info, form_item
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -16,6 +17,8 @@ game_01_flag = False
 game_02_flag = False
 
 mouse_controller = MouseController()
+OCR = OCR(model_name=r"PP-OCRv5_server_rec",model_dir=r"./ocr_model/PP-OCRv4_server_rec_doc_infer")
+
 N_pos_list = [(990, 591)]  # 难度选择位置 休闲
 # N_pos = [(973,310),(976,157)] # 难度选择位置 常规 N1
 camp_pos_list = [(171, 982, 1246, 458)]
