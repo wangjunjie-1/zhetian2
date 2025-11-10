@@ -1,14 +1,15 @@
 import time
 import pyautogui
 from mouse import MouseController
-from Item import Item
+import os
 import logging
 import sys
 from pynput import mouse, keyboard
 from typing import List
 from ocr import OCR
-from utils import enter_info, form_item
+from utils import enter_info, form_item,screen_move2self
 from tech import Technology
+from PIL import ImageGrab
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     level=logging.DEBUG,
@@ -18,7 +19,7 @@ game_01_flag = False
 game_02_flag = False
 
 mouse_controller = MouseController()
-ocr = OCR(model_name=r"PP-OCRv5_server_rec",model_dir=r"./ocr_model/PP-OCRv4_server_rec_doc_infer")
+ocr = OCR(model_name=r"PP-OCRv4_server_rec_doc_infer",model_dir=r"./ocr_model/PP-OCRv4_server_rec_doc_infer")
 # 初始化科技管理类
 tech_manager = Technology(ocr)
 
@@ -53,7 +54,7 @@ def on_press(key):
         if char == "g":
             game_step01()
         if char == "h":
-            game_step02()
+            game_step011()
         if char == "j":
             hero_start()
         if char == "t":
@@ -61,15 +62,14 @@ def on_press(key):
 
 
 def killer(key):
-    try:
-        # 检查是否按下了字母 'k'（区分大小写，但 char 会反映实际按键）
-        if hasattr(key, 'char') and key.char in ('k', 'K'):
-            print("K pressed! Killing main process...")
-            # 强制终止当前进程
-            os.kill(os.getpid(), signal.SIGTERM)
-            # 或者在 Windows 上也可以用 os._exit(1) 立即退出（不推荐用于生产）
-    except Exception as e:
-        pass  # 忽略异常（如特殊键）
+  
+    # 检查是否按下了字母 'k'（区分大小写，但 char 会反映实际按键）
+    if hasattr(key, 'char') and key.char in ('k', 'K'):
+        print("K pressed! Killing main process...")
+        # 强制终止当前进程
+
+        os._exit(0)
+
 
 def build_construct(builder_idx, construct_idx, box_list: List):
     """通用建筑函数
@@ -194,51 +194,22 @@ def game_step01():
     time.sleep(5)
     build_army(builder_idx=base_idx, army_idx="Q", box_list=tree_aim_list[0],time=3)
     enter_info("game01 end")
-     
+def game_step011():
 
     global game_02_flag
-    if game_02_flag:
-        enter_info("step02 pass")
-        return
+    # if game_02_flag:
+    #     enter_info("step02 pass")
+    #     return
     game_02_flag = True
     enter_info("step02...")
 
+
+
+
+    tech_manager.upgrade(str(camp_idx),"R",4)
+    # tech_manager.upgrade(str(camp_idx),"Q",10)h
+
     
-    pyautogui.press(str(camp_idx))
-    # 研究科技
-    for i in range(4):
-        time.sleep(1)
-        pyautogui.press("R")
-
-        pyautogui.press(str(camp_idx))
-
-    # 研究科技
-    for i in range(11):
-        # 获取下一级科技所需资源
-        next_requirements = tech_manager.get_next_level_requirements()
-        if next_requirements:
-            enter_info(f"升级科技到第{tech_manager.get_current_level() + 1}级，需要资源: {next_requirements}")
-        time.sleep(3)
-        pyautogui.press("Q")
-        # 更新科技级别
-        tech_manager.upgrade()
-        enter_info(f"当前科技级别: {tech_manager.get_current_level()}")
-    # 成长塔
-    time.sleep(30)
-    build_construct(builder_idx=farmer01_idx, construct_idx="D", box_list=hero_tower_pos)
-    time.sleep(30)
-    mouse_controller.left_click(hero_tower_pos[2]-15, hero_tower_pos[3]-15)
-    # 研究科技
-    for i in range(11):
-        # 获取下一级科技所需资源
-        next_requirements = tech_manager.get_next_level_requirements()
-        if next_requirements:
-            enter_info(f"升级科技到第{tech_manager.get_current_level() + 1}级，需要资源: {next_requirements}")
-        time.sleep(10)
-        pyautogui.press("Q")
-        # 更新科技级别
-        tech_manager.upgrade()
-        enter_info(f"当前科技级别: {tech_manager.get_current_level()}")
 
 def game_step02():
     enter_info("game02 start...")
@@ -297,17 +268,15 @@ if __name__ == "__main__":
     mouse_listener.start()
     kb_listener.start()
 
-    try:
-        # 主线程等待，直到 running 为 False
-        while running:
-            time.sleep(0.1)
-    except KeyboardInterrupt:
-        print("用户中断 (Ctrl+C)")
-    finally:
-        # 停止监听器（优雅关闭）
-        mouse_listener.stop()
-        kb_listener.stop()
-        mouse_listener.join()
-        kb_listener.join()
-        print("程序已退出")
-        sys.exit(0)
+
+
+    while running:
+        time.sleep(0.1)
+
+    # 停止监听器（优雅关闭）
+    mouse_listener.stop()
+    kb_listener.stop()
+    mouse_listener.join()
+    kb_listener.join()
+    print("程序已退出")
+    sys.exit(0)

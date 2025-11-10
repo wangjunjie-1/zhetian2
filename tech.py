@@ -24,10 +24,11 @@ class Technology:
             }
         }
         self.require_resources = json.load(open("tech_requirements.json","r"))
+        print(self.require_resources)
         self.map = {
-            research_idx:"research",
-            camp_idx:"camp",
-            advanced_camp_idx:"advanced_camp",
+            str(research_idx):"research",
+            str(camp_idx):"camp",
+            str(advanced_camp_idx):"advanced_camp",
         }
 
     def upgrade(self,build_idx,tech_idx,level):
@@ -35,10 +36,10 @@ class Technology:
         cur_level = self.current_level[tech_name][tech_idx]
         for aim_level in range(cur_level+1,level+1):
             # require resources
-            requirements = self.require_resources[tech_name][tech_idx][aim_level]
+            requirements = self.require_resources[tech_name][tech_idx][str(aim_level)]
             req_gold = int(requirements["gold"])
             req_wood = int(requirements["wood"])
-            while true:
+            while True:
                cur_gold,cur_wood = self.ocr.check_gold_wooden()
                if cur_gold >= req_gold and cur_wood >= req_wood:
                    break
